@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://cybersecnitd.github.io/"
 languageCode = "en-us"
 title = "CyberSec NITD"
 theme = "coder"
