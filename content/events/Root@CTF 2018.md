@@ -6,7 +6,7 @@ draft: false
 
 # Root Ctf 2018
 
-This year we hosted our 2nd Root CTF in Tech Fest of NIT, Delhi.
+This year we hosted our [2nd Root CTF](https://github.com/CyberSecNITD/rootctf2018 "CTF 2K18") in Tech Fest of NIT, Delhi.
 It was **lit**.
 
 
