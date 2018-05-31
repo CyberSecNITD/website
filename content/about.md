@@ -1,5 +1,7 @@
 ---
 title: "About CyberSec NITD"
+date: 2018-05-30T19:03:12+05:30
+draft: false 
 ---
 
 We are group of Cyber Security Enthusiasts with diverse skills working togther to evangelise Computer Security in NIT Delhi.
