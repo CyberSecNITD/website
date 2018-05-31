@@ -25,11 +25,11 @@ paginate        = 6
   orgWebsite = "https://cybersecnitd.github.io"
   orgDescription = "Cyber security club at NIT Delhi"
 
-  author = "EM"
+  author = "CyberSec NITD"
   authorAvatar = "img/ghost-icon.png"
   authorLocation = "Bandung, ID"
   authorWebsite = "https://eueung.github.io"
-  authorDescription = "Describe yourself.."
+  authorDescription = ""
 
   pageNotFoundTitle = "404 - Page not found"
 
