@@ -6,4 +6,3 @@ Powered by Hugo and hugo-coder theme
 ## Contributing
 
 Read [Hugo's Documentation](https://gohugo.io/content-management/) on content management
-
