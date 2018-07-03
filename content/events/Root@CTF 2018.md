@@ -1,12 +1,10 @@
 ---
-title: "Root_ctf"
+title: "Root CTF 2018"
 date: 2018-05-30T17:38:07+05:30
 draft: false
+author: "Vighnesh Sk"
 ---
 
-# Root Ctf 2018
-
-This year we hosted our 2nd Root CTF in Tech Fest of NIT, Delhi.
-It was **lit**.
+It's time to do it again!
 
 
