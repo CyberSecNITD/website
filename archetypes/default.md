@@ -1,14 +1,12 @@
----
-author: ""
-date: {{ .Date }}
-linktitle: {{ replace .Name "-" " " | title }}
-nomenu:
-  main:
-    parent: tutorials
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
-title: {{ replace .Name "-" " " | title }}
-weight: 5
-image: img/welcome.jpg
-authorAvatar: hugo-logo.png
----
++++
+title = "{{ replace .Name "-" " " | title }}"
+description = ""
+author = ""
+tags = []
+date = {{ .Date }}
+categories = []
+nomenu = "main"
+image="<BACKGROUND IMAGE FOR YOUR POST>"
+authorAvatar= "author/<YOUR AVATAR>"
+profileLink="<WITHOUT HTTP:// PART>"
++++
