@@ -1,0 +1,28 @@
+{{ partial "head" . }}
+
+{{if ne .Site.Params.singleViewStyle "casper"}}<body class="ctsingle">
+{{else}}<body class="page-template">{{end}}
+<div class="site-wrapper"> 
+
+{{if ne .Site.Params.singleViewStyle "casper"}}{{ partial "header" . }}
+{{else}}{{ partial "header-sori" . }}{{end}}
+
+<style>
+	h1,h2,h3,span,div{
+		font-family: 'Source Code Pro', monospace;
+	}
+</style>
+<main id="site-main" class="site-main outer" role="main" style="font-family: 'Source Code Pro', monospace;">
+  <div class="inner">
+  	{{if ne .Site.Params.singleViewStyle "casper"}}
+    <div class="post-feed" style="font-family: 'Source Code Pro', monospace;">
+      {{ partial "page-single" . }}
+    </div>
+    {{else}}
+      {{ partial "page-single-sori" . }}
+    {{end}}
+  </div>
+</main>
+
+{{ partial "footer" . }}
+</div>{{ partial "js" . }}</body></html>

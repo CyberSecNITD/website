@@ -28,7 +28,6 @@ paginate        = 6
   author = "CyberSec NITD"
   authorAvatar = "img/ghost-icon.png"
   authorLocation = "Bandung, ID"
-  authorWebsite = "https://eueung.github.io"
   authorDescription = ""
 
   pageNotFoundTitle = "404 - Page not found"
