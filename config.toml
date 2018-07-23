@@ -36,16 +36,12 @@ paginate        = 6
   singleViewStyle = "casper"
 
 [permalinks]
-  post = "/:slug/"
+	post = "/:slug/"
 
 [[menu.main]]
     name = "Blog"
     weight = 1
-    url  = "/posts/"
-[[menu.main]]
-    name = "Events"
-    weight = 2
-    url = "/events/"
+    url  = "/post/"
 [[menu.main]]
     name = "About"
     weight = 3
