@@ -2,9 +2,11 @@
 
 COMMIT_MSG=$1
 
-echo "\033[32m Deplopying Website.. \033[32m"
+printf "\033[32m Deplopying Website.. \033[32m"
 
-hugo -t coder
+rm -rvf public/*
+
+hugo -t casper-two
 
 cd public
 
