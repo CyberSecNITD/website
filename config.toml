@@ -25,11 +25,10 @@ paginate        = 6
   orgWebsite = "https://cybersecnitd.github.io"
   orgDescription = "Cyber security club at NIT Delhi"
 
-  author = "EM"
+  author = "CyberSec NITD"
   authorAvatar = "img/ghost-icon.png"
   authorLocation = "Bandung, ID"
-  authorWebsite = "https://eueung.github.io"
-  authorDescription = "Describe yourself.."
+  authorDescription = ""
 
   pageNotFoundTitle = "404 - Page not found"
 
@@ -40,16 +39,14 @@ paginate        = 6
   post = "/:slug/"
 
 [[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 200
-
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
 [[menu.main]]
-  name = "Events"
-  url = "/events"
-  weight = 100
-
+    name = "Events"
+    weight = 2
+    url = "/events/"
 [[menu.main]]
-  name = "About"
-  url = "/about"
-  weight = 99
+    name = "About"
+    weight = 3
+    url = "/about/"

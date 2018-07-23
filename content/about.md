@@ -17,9 +17,40 @@ Work on our Personal projects, share knowledge, talk about topic concerning Comp
 
 We host weekly meetups where we give talks, discuss on the new topics and help other members.
 
-We attend meetups by  ILUGD, NULL CON, SegFault, PyDelhi and sometimes give talks too.
+We attend meetups by [ILUGD](http://ilugd.github.io/), NULL CON, SegFault, [PyDelhi](http://pydelhi.org/) and sometimes give talks too.
 
- 
+## People
+
+
+
+#### Founders
+[Mohit Rajain](https://github.com/mohitrajain/)
+
+> Sticking daggers into NIT Delhi's firewall as a hobby
+
+[Shivam](https://github.com/DeadlyHollows)
+
+> straces every application he runs on his machine.
+
+[Abhay](https://github.com/abhaysingh1998)
+
+> In free time he turns on his wifi card into Monitor mode
+> and only he knows what's he upto.
+
+[Vighnesh](https://github.com/Boot-Error/)
+
+> Loves to rice his linux machines
+
+Parvez
+
+> Machine Learning because humans aren't good at CyberSecurity
+
+#### Members
+
+[Ajay Rathore](https://github.com/dSecret/)
+
+> Man of frontend dev wisdom
+
 
 ## Join us
 
@@ -27,4 +58,4 @@ Security Club is open for everyone in NITD.
 
 We don't follow a strict recruitment process for club members, students irrespective of course and year can join us.
 
-
+We host meetups every week during the semester, meet us there.

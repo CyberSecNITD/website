@@ -3,6 +3,7 @@ title: "Root CTF 2018"
 date: 2018-05-30T17:38:07+05:30
 url: /events/rootctf2018
 draft: false
+author: "Vighnesh Sk"
 ---
 
 The time has come to do it again!
