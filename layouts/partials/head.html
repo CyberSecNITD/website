@@ -11,12 +11,14 @@
 
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />
     <link rel="canonical" href="{{ .Permalink }}" />
-    <link href="https://fonts.googleapis.com/css?family=Orbitron|Fira+Mono|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Fira+Mono|Roboto|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+ href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
     {{ if .IsPage }} <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" /> {{ else }}
     <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" /> {{ end }}
 
-    {{ partial "meta-twitter" . }}
-    {{ partial "meta-facebook" . }}
+    <!--{{ partial "meta-twitter" . }}
+    {{ partial "meta-facebook" . }}-->
 
     {{ .Hugo.Generator }}
 
