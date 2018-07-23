@@ -12,8 +12,7 @@
     <link rel="shortcut icon" href="{{ "favicon.ico" | absURL}}" />
     <link rel="canonical" href="{{ .Permalink }}" />
     <link href="https://fonts.googleapis.com/css?family=Orbitron|Fira+Mono|Roboto|Source+Code+Pro" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
- href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
+   
     {{ if .IsPage }} <meta name="description" content="{{ .Description | default (substr .Summary 0 160) }}" /> {{ else }}
     <meta name="description" content="{{ .Site.Params.metadescription | default .Site.Params.description }}" /> {{ end }}
 
@@ -26,6 +25,12 @@
     <link rel="stylesheet" type="text/css" href="{{ "built/screen.css" | absURL}}" /> 
     <link rel="stylesheet" type="text/css" href="{{ "css/casper-two.css" | absURL}}" /> 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    <style>
+		@font-face {
+		    font-family: Mplus Reg;
+		    src: url("{{"fonts/mplus-1mn-regular.ttf" | absURL}}");
+		}
+	</style>
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
 
     {{ if .Site.Params.RSSLink}}<link href="{{.Site.Params.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{else}}{{ if eq .URL "/" }}<link href="{{ "index.xml" | absURL}}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }} {{ end }}
