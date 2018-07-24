@@ -1,16 +1,24 @@
 <div class="floating-header">
-  <div class="floating-header-logo">
-    <a href="{{"/" | absURL}}">
-      {{ if .Site.Params.logo }}<img src="{{ .Site.Params.logo  | absURL}}" alt="{{.Site.Title}}" />{{end}}
-      <span>{{.Site.Title}}</span>
-    </a>
-  </div>
-  <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">{{.Title}}</div>
-
+  <style type="text/css"> 
+		.progress::-webkit-progress-value{
+		    background-color:black !important;
+		}
+		.progress::-moz-progress-bar{
+		    background-color:black !important;
+		}
+		.floating-header{
+			height:initial !important; 
+		}
+		.progress, .progress-container{
+			height:4px !important;
+		}
+		.progress{
+			bottom:-4px !important;
+		}
+	</style>
   <progress class="progress" value="0">
     <div class="progress-container">
-      <span class="progress-bar"></span>
+      <span class="progress-bar" style="background-color:black"></span>
     </div>
   </progress>
 </div>
