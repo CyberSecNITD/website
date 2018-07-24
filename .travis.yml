@@ -1,14 +1,8 @@
-langauage:
-    go
-
-go:
-    - master
-
 install:
-    - go get github.com/gohugoio/hugo
+    - rm -rvf public/* || exit 0
 
 script:
-    - hugo -t casper-two
+    - ./bin/hugo -t casper-two
 
 deploy:
     local_dir: public
