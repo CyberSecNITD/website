@@ -39,9 +39,9 @@ We attend meetups by [ILUGD](http://ilugd.github.io/), NULL CON, SegFault, [PyDe
 
 [Vighnesh](https://github.com/Boot-Error/)
 
-> Loves to rice his linux machines
+> Loves to rice his linux machines, [dotfiles?](https://gitlab.com/Boot-Error/dotfiles)
 
-Parvez
+[Parvez](https://github.com/ipmob/)
 
 > Machine Learning because humans aren't good at CyberSecurity
 
