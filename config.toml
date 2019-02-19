@@ -16,9 +16,8 @@ paginate        = 6
   customCSS = []
   RSSLink = ""
 
-  twitterName = "faketryghost"
-  fbName = "fakeghost"
   githubName = "CyberSecNITD"
+  telegramLink = "https://t.me/joinchat/Ez80i0_cdc8cQv5IUceBzg"
 
   logo = ""
   orgName = "CyberSec NITD"

@@ -13,7 +13,7 @@ tags = [
 	"ctf",
 ]
 authorAvatar = "https://avatars2.githubusercontent.com/u/8546140?s=400&v=4"
-profileLink = "https://github.com/Boot-Error"
+profileLink = "github.com/Boot-Error"
 +++
 
 The time has come to do it again!
