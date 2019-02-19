@@ -8,7 +8,7 @@ categories = [
 	"event",
 ]
 draft = false
-author = "BootError99"
+author = "Vighnesh"
 tags = [
 	"ctf",
 ]
