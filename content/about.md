@@ -45,8 +45,6 @@ We attend meetups by [ILUGD](http://ilugd.github.io/), NULL CON, SegFault, [PyDe
 
 > Machine Learning because humans aren't good at CyberSecurity
 
-#### Members
-
 [Ajay Rathore](https://github.com/dSecret/)
 
 > Man of frontend dev wisdom
