@@ -43,6 +43,10 @@ paginate        = 6
     weight = 1
     url  = "/post/"
 [[menu.main]]
+    name = "Segfault"
+    weight = 2
+    url  = "/segfault/"
+[[menu.main]]
     name = "About"
     weight = 3
     url = "/about/"
