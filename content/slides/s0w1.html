@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Stage 0 Workshop 1">
+  <title>Reverse Engineering</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Reverse Engineering</h1>
+  <p class="author">Stage 0 Workshop 1</p>
+</section>
+
+<section id="whoami" class="title-slide slide level1"><h1>$whoami</h1><p>Vighnesh Sk, CSE 4th year</p>
+<p>I don’t hack, linux evangalism, Dev, Maker.</p>
+<ul>
+<li>Github: <a href="https://github.com/Boot-Error" class="uri">https://github.com/Boot-Error</a></li>
+<li>Mail: <a href="mailto:161210045@nitdelhi.ac.in">161210045@nitdelhi.ac.in</a></li>
+<li>Telegram: <a href="https://t.me/booterror">booterror</a></li>
+</ul></section>
+<section><section id="wtf-is-reverse-engineering" class="title-slide slide level1"><h1>wtf is reverse engineering?</h1><p>why does it sound cool?</p>
+<p>and why is there a <a href="https://phineasandferb.fandom.com/wiki/What_Do_It_Do%3F">Phineas and Ferb</a> episode on it?</p></section><section id="reverse-engineering-is-the-process-of-extracting-the-knowledge-or-design-blueprints-from-anything-man-made" class="slide level2">
+<h2>“Reverse engineering is the process of extracting the knowledge or design blueprints from anything man-made”</h2>
+</section><section id="section" class="slide level2">
+<h2></h2>
+<figure>
+<img data-src="https://i.ytimg.com/vi/xrZcaxUUyXo/maxresdefault.jpg" alt="" /><figcaption>uno reverse</figcaption>
+</figure>
+</section><section id="what-do-we-do" class="slide level2">
+<h2>What do we do?</h2>
+<ul>
+<li>To understand unknown software, explore inner workings of a malware, find vulnerabilities in a firmware.</li>
+<li>Security Researchers specializes in various domains in Reversing such as Malware Research, Firmware.</li>
+<li>This knowledge helps in developing exploits to abuse system (red team) or fix loop holes in software (blue team)</li>
+</ul>
+</section><section id="can-i-make-money" class="slide level2">
+<h2>Can I make money?</h2>
+<p>Yep.</p>
+</section><section id="how" class="slide level2">
+<h2>How?!?</h2>
+<ul>
+<li>Bug Bounty Programs</li>
+<li>Hack ATMs, make it spit money <a href="https://www.youtube.com/watch?v=FkteGFfvwJ0">Jackpotting ATM DEFCON 18</a></li>
+<li>Write hacks for games, which we will do in future!</li>
+</ul>
+</section><section id="endless-possibilites" class="slide level2">
+<h2>Endless Possibilites :)</h2>
+<figure>
+<img data-src="https://media.makeameme.org/created/vulnerabilities-vulnerabilities-everywhere.jpg" alt="" /><figcaption>vulenrabilities everywhere</figcaption>
+</figure>
+</section></section>
+<section><section id="computer-software" class="title-slide slide level1"><h1>Computer Software</h1><p>To a Reverse Engineer</p></section><section id="to-a-developer" class="slide level2">
+<h2>To a Developer</h2>
+<ul>
+<li>lines of code in programming language of their choice</li>
+<li>Stack, Strings, For-loop, Linked List, Classes and so on..</li>
+</ul>
+</section><section id="to-a-end-user" class="slide level2">
+<h2>To a End User</h2>
+<ul>
+<li>To Users, its this huge “.exe” file that you double click and things run magically.</li>
+</ul>
+</section><section id="to-a-reverse-engineer" class="slide level2">
+<h2>To a Reverse Engineer</h2>
+<ul>
+<li>To a Reverse Engineer, its both.
+<ul>
+<li>They work on the “.exe” but understand or develop and idea of how it must have been coded.</li>
+<li>For example, if you want to hack a game, get infinite health, probably you ll find the function or DS responsible for storing the health value which is an integer ( as a developer ) stored as binary code ( as a user ). Then rewrite or patch the “.exe” to let’s say keep health to MAX_INT value.</li>
+</ul></li>
+</ul>
+</section><section id="tldr" class="slide level2">
+<h2>TL;DR</h2>
+<ul>
+<li>Make a meaning out of magic and tame it to your need</li>
+</ul>
+</section></section>
+<section><section id="lets-roll-some-demos" class="title-slide slide level1"><h1>Let’s roll some demos</h1><p>It’s alright if you don’t understand wtf is going, enjoy the magic!</p></section><section id="tldr-demo-1" class="slide level2">
+<h2>TL;DR demo 1</h2>
+<ul>
+<li>.exe files are binary executable files.</li>
+<li>Your constants (strings) are stored in the executable ( rodata section )</li>
+<li>Never write stupid shit like this again</li>
+</ul>
+</section><section id="another-one" class="slide level2">
+<h2>Another one?</h2>
+<p>Sure why not?</p>
+</section><section id="tldr-demo-2" class="slide level2">
+<h2>TL;DR demo 2</h2>
+<ul>
+<li>Program variables are stored as a stack in memory.</li>
+<li><code>gets()</code> is a bitch, even the man page says so.</li>
+<li>Buffer Overflow exploit.</li>
+</ul>
+</section></section>
+<section id="pre-requisites" class="title-slide slide level1"><h1>Pre-Requisites?</h1><ul>
+<li>Firm understanding on C programming language
+<ul>
+<li>Specifically, Pointers</li>
+<li>Functions and Data Types</li>
+</ul></li>
+<li>An idea about CPU and Memory</li>
+<li>Assembly Languages (basic understanding, rest we can always google)</li>
+<li>Some Python Programming (for developing exploits)</li>
+</ul></section>
+<section id="resources-for-reference" class="title-slide slide level1"><h1>Resources for Reference</h1><ul>
+<li>Hacking: The Art of Exploitation by Jon Erickson</li>
+<li>Reversing: The secrets of Reverse Engineering by Eldad Eilam</li>
+<li><a href="https://swaroopch.gitbook.io/byte-of-python/">Byte of Python by Swaroop CH</a></li>
+<li>Many more on the way!</li>
+</ul></section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
