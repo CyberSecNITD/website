@@ -44,7 +44,7 @@ paginate        = 6
 [[menu.main]]
     name = "Segfault"
     weight = 2
-    url  = "/segfault/"
+    url  = "/tags/segfault/"
 [[menu.main]]
     name = "About"
     weight = 3

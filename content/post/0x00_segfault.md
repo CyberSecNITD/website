@@ -1,6 +1,6 @@
 +++
 title = "0x00 - Segfault"
-description = "Segfault Stage 0 Workshop 1, wtf is Reverse Engineering?"
+description = "First workshop on wtf is Reverse Engineering?"
 author = "Vighnesh SK"
 tags = ["segfault", "s0w1"]
 date = 2020-01-24T00:23:08+05:30
