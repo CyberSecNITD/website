@@ -9,7 +9,7 @@ nomenu = "main"
 image="/images/0x00_segfault_banner.png"
 authorAvatar= "https://avatars2.githubusercontent.com/u/8546140?s=400&v=4"
 profileLink="github.com/Boot-Error"
-slug = "0x00"
+slug = "/segfault/0x00"
 +++
 
 This workshop was conducted on Wednesday 22nd Jan, 2020. This was given to students of first years of all discipline.
