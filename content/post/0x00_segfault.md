@@ -2,7 +2,7 @@
 title = "0x00 - Segfault"
 description = "First workshop on wtf is Reverse Engineering?"
 author = "Vighnesh"
-tags = ["segfault", "0x00"]
+tags = ["segfault", "workshop"]
 date = 2020-01-24T00:23:08+05:30
 categories = ["workshop"]
 nomenu = "main"
