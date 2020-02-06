@@ -34,3 +34,19 @@ This journey requires a lot of patience, as there are a lot of concepts, topics 
 ## Important stuff here!
 
 The resources and a little summary of the workshop will be updated here along with links to slides and references. Because a good coder always documents his/her cluster spaghetti.
+
+### Join the mailing list
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="900"
+  height="700">
+</iframe>
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/segfault-cybersecnitd'
+     + '&showsearch=true&showpopout=true&showtabs=false'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
