@@ -35,6 +35,3 @@ This journey requires a lot of patience, as there are a lot of concepts, topics 
 
 The resources and a little summary of the workshop will be updated here along with links to slides and references. Because a good coder always documents his/her cluster spaghetti.
 
-### Join the mailing list
-
-{{< googlegroupsinvite segfault-cybersecnitd >}}
