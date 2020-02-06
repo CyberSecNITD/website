@@ -5,6 +5,11 @@ disqusShortname = ""
 paginate        = 6
 #SectionPagesMenu = "main"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   title       = "CyberSec NITD"
   subtitle    = "Cyber security club at NIT Delhi"
