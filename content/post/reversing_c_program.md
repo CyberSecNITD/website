@@ -6,7 +6,7 @@ tags = ["segfault"]
 date = 2020-02-11T21:32:10+05:30
 categories = []
 nomenu = "main"
-image="/images/0x00_segfault_banner.png"
+image="/images/0x01_segfault_banner.png"
 authorAvatar= "https://avatars2.githubusercontent.com/u/8546140?s=400&v=4"
 profileLink="github.com/Boot-Error"
 slug = "/segfault/reverse-c-program"
