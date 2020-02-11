@@ -21,7 +21,7 @@ Now C programs are compiled to assembly, since C have not much syntax sugar it b
 
 Given is a C program, compiled to a binary and then disassembled to reverse engineer.
 
-~~~~ {#decompiled .asm .numberLines startFrom="1"}
+```asm
 (gdb) disass main
 	Dump of assembler code for function main:
 	   0x000005cd <+0>:     lea    ecx,[esp+0x4]
@@ -97,7 +97,7 @@ Given is a C program, compiled to a binary and then disassembled to reverse engi
 	   0x000006af <+226>:   lea    esp,[ecx-0x4]
 	   0x000006b2 <+229>:   ret
 	End of assembler dump.
-~~~~
+```
 
 When it comes to reverse engineering, it boils down to a process of induction. We are evident of `functions` in C, we add them using header files and then call them to our need.
 Then we use a lot of variables, for computation, passing it to functions. Then some conditionals and iterators(loops), well loops are basically conditional branching repeatedly executes a piece of code.
@@ -181,7 +181,7 @@ Let's play!
 
 Now we have the C code, it should be easy to understand what it does.
 
-~~~~ {#decompiled .c .numberLines startFrom="1"}
+```c
 int local_1c = 0;
 int local_14 = 0;
 printf([ebx-0x1870]);
@@ -194,7 +194,7 @@ while (local_10 <= local_1c) {
 }
 local_14 /= local_1c;
 printf([ebx-0x1844], local_14, local_1c);
-~~~~
+```
 
 We can dry run this code to fathom its flow and derieve the algorithm used.
 
