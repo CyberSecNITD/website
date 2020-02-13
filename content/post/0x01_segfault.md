@@ -35,3 +35,4 @@ This workshop was conducted on Wednesday 12th Feb, 2020.
 ## Resources
 
 - [0x01 slides](/slides/0x01/index.html)
+- A video on [How computers read code?](https://www.youtube.com/watch?v=QXjU9qTsYCc)
