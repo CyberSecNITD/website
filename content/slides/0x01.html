@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Segfault - Reverse Engineering Workshop">
+  <title>0x01 Binary Analysis</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">0x01 - Binary Analysis</h1>
+  <p class="author">Segfault - Reverse Engineering Workshop</p>
+  <p class="date">29-02-2020</p>
+</section>
+
+<section id="agenda" class="title-slide slide level1"><h1>Agenda</h1><ul>
+<li>How CPU executes code?</li>
+<li>Understanding Assembly Language</li>
+<li>Reversing a C program</li>
+</ul></section>
+<section><section id="how-cpu-executes-code" class="title-slide slide level1"><h1>How CPU executes code?</h1><p>It’s not really magic, or is it?</p></section><section id="cpu-architecture" class="slide level2">
+<h2>CPU Architecture</h2>
+<ul>
+<li>A processing unit that contains an <strong>arithmetic logic unit</strong> and <strong>processor registers</strong></li>
+<li>A <strong>control unit</strong> that contains an <strong>instruction register</strong> and <strong>program counter</strong></li>
+<li><strong>Memory</strong> that stores data and instructions</li>
+<li>External mass storage</li>
+<li>Input and output mechanisms</li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img data-src="https://www.computerscience.gcse.guru/wp-content/uploads/2016/04/Von-Neumann-Architecture-Diagram.jpg" alt="" /><figcaption>von neumann architecture</figcaption>
+</figure>
+</section><section id="intel-x86" class="slide level2">
+<h2>Intel x86</h2>
+<ul>
+<li>x86 is the Intel’s line of microprocessor family.</li>
+<li><em>IA 32</em> is 32bit architecture and <em>x86_64</em> is 64bit architecture</li>
+</ul>
+</section><section id="x86-assembly" class="slide level2">
+<h2>x86 Assembly</h2>
+<div class="fragment">
+<ul>
+<li>this is black hole we all will be sucked in 4ever.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>WE SKIP :)</li>
+</ul>
+</div>
+</section><section id="lets-talk-about-code" class="slide level2">
+<h2>Let’s talk about Code</h2>
+<figure>
+<img data-src="code_comparison.png" alt="" /><figcaption>C &lt;-&gt; Assembly &lt;-&gt; Binary</figcaption>
+</figure>
+</section><section id="whats-inside-a-binary" class="slide level2">
+<h2>What’s inside a binary?</h2>
+<ul>
+<li>Headers</li>
+<li>Code ( instructions )</li>
+<li>Data ( constants )</li>
+</ul>
+</section><section id="elf-executable-linkable-format" class="slide level2">
+<h2>ELF ( Executable Linkable format )</h2>
+<ul>
+<li>Specification on how a Executable Binary should have it’s code and data.</li>
+<li>The Linux Kernel parses and executes the binary accordingly.</li>
+<li>Look at <a href="http://www.sco.com/developers/devspecs/abi386-4.pdf">System V ABI Specification</a></li>
+</ul>
+</section><section id="enough-talk-lets-do-some-work" class="slide level2">
+<h2>Enough Talk, let’s do some work</h2>
+</section></section>
+<section><section id="binary-analysis" class="title-slide slide level1"><h1>Binary Analysis</h1><p>Let’s decipher the magic</p></section><section id="what-will-we-be-doing" class="slide level2">
+<h2>What will we be doing?</h2>
+<p>Here is an unknown program, we will figure out what it does.</p>
+</section><section id="how-will-we-be-doing-it" class="slide level2">
+<h2>How will we be doing it?</h2>
+<ol type="1">
+<li class="fragment">Find the binary Specficiation using <code>file</code></li>
+<li class="fragment">Run a disassembler over the binary, using <code>objdump</code></li>
+</ol>
+</section><section id="before-we-continue.." class="slide level2">
+<h2>Before we continue..</h2>
+<p>What is the difference b/w <code>Program</code> and <code>Process</code>?</p>
+<div class="fragment">
+<ul>
+<li>A <code>program</code> is set of instructions.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>A <code>Process</code> is a running <code>program</code></li>
+</ul>
+</div>
+</section><section id="remember-we-skipped-x86-assembly" class="slide level2">
+<h2>Remember we skipped x86 Assembly?</h2>
+<p>We need to have some idea to understand the thing in front of us.</p>
+<p>Follow this <a href="https://www.cs.virginia.edu/~evans/cs216/guides/x86.html">x86 guide</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
