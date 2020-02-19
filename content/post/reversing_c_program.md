@@ -181,7 +181,7 @@ Let's play!
 
 Now we have the C code, it should be easy to understand what it does.
 
-```
+```c
 int local_1c = 0;
 int local_14 = 0;
 printf([ebx-0x1870]);
