@@ -102,7 +102,7 @@ Given is a C program, compiled to a binary and then disassembled to reverse engi
 When it comes to reverse engineering, it boils down to a process of induction. We are evident of `functions` in C, we add them using header files and then call them to our need.
 Then we use a lot of variables, for computation, passing it to functions. Then some conditionals and iterators(loops), well loops are basically conditional branching repeatedly executes a piece of code.
 
-It is important to understand the assembly code, refer to this [x86 assembly guide](https://kutt.it/reversing-c-programs).
+It is important to understand the assembly code, refer to this [x86 assembly guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html).
 
 And lastly, it about developing a approach to tackling a problem, in this case you might find it definitive to follow the instructions given but it might break when the program becomes complex. Then you must evaluate and develop new techniques, many security researchers write their experiences on finding bugs, read them and introspect on their techniques.
 
