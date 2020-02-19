@@ -181,20 +181,7 @@ Let's play!
 
 Now we have the C code, it should be easy to understand what it does.
 
-```c
-int local_1c = 0;
-int local_14 = 0;
-printf([ebx-0x1870]);
-scanf("%d", &local_1c);
-while (local_10 <= local_1c) {    
-	printf([ebx-0x185b]);    
-	scanf("%d", &local_18);    
-	local_14 += local_18;    
-	local_10 += 1;
-}
-local_14 /= local_1c;
-printf([ebx-0x1844], local_14, local_1c);
-```
+{{< gist Boot-Error 94eaeea171fdd31e019efce976592a0f >}}
 
 We can dry run this code to fathom its flow and derieve the algorithm used.
 
