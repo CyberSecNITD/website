@@ -1,4 +1,4 @@
-baseurl         = "https://cybersec.upvision.co/"
+baseurl         = "https://cybersecnitd.github.io/"
 theme           = "casper-two"
 languageCode    = "en-US"
 disqusShortname = ""
