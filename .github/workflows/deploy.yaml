@@ -1,0 +1,44 @@
+name: DeployWebsite 
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a multi-line script
+        run: |
+          rm -rvf public/*
+          chmod +x ./bin/hugo
+          ./bin/hugo -t casper-two
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: site-build
+          path: ./public
+
+  publish-gh-pages:
+    needs: build-site
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - name: Fetch site-build
+        uses: actions/download-artifact@v2
+        with:
+          name: site-build
+          path: ./public
+    
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: CyberSecNITD/CyberSecNITD.github.io 
+          publish_branch: main
+          publish_dir: ./public
+          commit_message: ${{ github.event.head_commit.message }}
